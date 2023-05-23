@@ -3,15 +3,15 @@
 class Toaster {
 
     public $farbe;
-    public $schaechte;
+    public $schaechte = 2;
     public $anzahlToasts;
     public $toastZustand;
     public $zeit;
 
-    public function __construct($farbe, $schaechte, $anzahlToasts, $zeit) {
+    public function __construct($anzahlToasts, $zeit) {
 
-        $this->farbe = $farbe;
-        $this->schaechte = $schaechte;
+        // $this->farbe = $farbe;
+        // $this->schaechte = $schaechte;
         $this->anzahlToasts = $anzahlToasts;
         $this->zeit = $zeit;
         
@@ -21,7 +21,7 @@ class Toaster {
 
         if ($this->anzahlToasts <= $this->schaechte) {
 
-            echo "Passt!";
+            $this->toasten();
 
         } else {
 
@@ -33,7 +33,19 @@ class Toaster {
 
     public function toasten() {
 
-        if ($this->zeit > 0) {
+        if ($this->anzahlToasts > 0) {
+
+            for($i = 1; $i <= 10; $i++){
+                
+                echo " ||";
+            
+                // Send output to browser immediately
+                flush();
+                
+            
+                // Sleep one second so we can see the delay
+                sleep(1);
+            }
 
             $this->toastZeiteinstellen();
 
@@ -69,7 +81,11 @@ class Toaster {
 
     public function toastAuswerfen() {
 
-       echo "Der Toast ist {$this->toastZustand}";
+        if (!empty($this->toastZustand)) {
+
+            echo "<br> Der Toast ist {$this->toastZustand}";
+            
+        }
 
     }
 
