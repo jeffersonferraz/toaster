@@ -24,7 +24,7 @@ class Toaster {
             $this->toasten();
 
         } else {
-            
+
             echo "Passt nicht!";
 
         }
@@ -37,9 +37,9 @@ class Toaster {
 
             if (!empty($this->zeit)) {
 
-                for($i = 1; $i <= 50; $i++){
+                for($i = 1; $i <= 57; $i++){
                 
-                    echo "<strong>|</strong>";
+                    echo "<strong>❙</strong>";
                 
                     // Send output to browser immediately
                     flush();
@@ -51,7 +51,7 @@ class Toaster {
                 echo "<br>";
             }
 
-            $this->toastZeiteinstellen();
+            $this->zeitEinstellen();
 
         } else {
 
@@ -61,7 +61,7 @@ class Toaster {
 
     }
 
-    public function toastZeiteinstellen() {
+    public function zeitEinstellen() {
 
         if ($this->zeit > 0 && $this->zeit <= 15) {
 
@@ -87,7 +87,7 @@ class Toaster {
 
         if (!empty($this->toastZustand)) {
 
-            echo "Der Toast ist {$this->toastZustand}";
+            echo "<section>Der Toast ist {$this->toastZustand}</section>";
             
         }
 

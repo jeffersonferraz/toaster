@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
     <title>Toaster</title>
 </head>
 <body>
@@ -14,38 +15,38 @@
 
         <form action="" method="post">
 
-            <label for="anzahl_toasts">Anzahl der Toasts: </label>
-            <input name="anzahl_toasts" type="number">
+            <input name="anzahl_toasts" type="number" placeholder="Toasts"> <br>
 
-            <label for="zeit">Zeit: </label>
-            <input name="zeit" type="number">
+            <input name="zeit" type="number" placeholder="Zeit"> <br>
 
-            <button name="button" type="submit">Toasten</button>
+            <button name="button" type="submit">Toasten</button> <br>
+
+            <?php
+                include_once "Toaster.class.php";
+
+                if (isset($_POST["button"])) {
+
+                    if ($_POST["anzahl_toasts"] < 0 || $_POST["zeit"] < 0) {
+
+                        echo "<section>Toasts einwerfen und Zeit eingeben.</section>";
+
+                    } else {
+
+                        $toast = new Toaster($_POST["anzahl_toasts"], $_POST["zeit"]);
+                        
+                        $toast->toastReintun();
+
+                        $toast->toastAuswerfen();
+
+                    }
+
+                }
+            ?>
 
         </form>
 
     </div>
 
-    <?php
-    include_once "Toaster.class.php";
-
-    if (isset($_POST["button"])) {
-
-        if ($_POST["anzahl_toasts"] < 0 || $_POST["zeit"] < 0) {
-
-            echo "Toasts einwerfen und Zeit eingeben.";
-
-        } else {
-
-            $toast = new Toaster($_POST["anzahl_toasts"], $_POST["zeit"]);
-
-            $toast->toastReintun();
-
-            $toast->toastAuswerfen();
-
-        }
-
-    }
-    ?>
+    
 </body>
 </html>
