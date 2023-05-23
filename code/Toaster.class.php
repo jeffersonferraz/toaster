@@ -35,16 +35,21 @@ class Toaster {
 
         if ($this->anzahlToasts > 0) {
 
-            for($i = 1; $i <= 10; $i++){
+            if (!empty($this->zeit)) {
+
+                for($i = 1; $i <= 50; $i++){
                 
-                echo " ||";
-            
-                // Send output to browser immediately
-                flush();
+                    echo "<strong>|</strong>";
                 
-            
-                // Sleep one second so we can see the delay
-                sleep(1);
+                    // Send output to browser immediately
+                    flush();
+                    
+                    // Sleep one second so we can see the delay
+                    usleep($this->zeit * 1000);
+                }
+
+                echo "<br>";
+
             }
 
             $this->toastZeiteinstellen();
@@ -83,7 +88,7 @@ class Toaster {
 
         if (!empty($this->toastZustand)) {
 
-            echo "<br> Der Toast ist {$this->toastZustand}";
+            echo "Der Toast ist {$this->toastZustand}";
             
         }
 
