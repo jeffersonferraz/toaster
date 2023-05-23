@@ -24,7 +24,7 @@ class Toaster {
             $this->toasten();
 
         } else {
-
+            
             echo "Passt nicht!";
 
         }
@@ -49,7 +49,6 @@ class Toaster {
                 }
 
                 echo "<br>";
-
             }
 
             $this->toastZeiteinstellen();
