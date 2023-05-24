@@ -27,18 +27,32 @@ body {
 }
 
 input {
-    width: 250px;
+    width: 252px;
     margin: 5px 0px;
     padding: 5px 0px;
 }
 
 button {
-    width: 254px;
+    width: 256px;
     margin: 20px 0px;
     padding: 10px 0px;
 }
 
+.status_button {
+    width: 80px;
+    margin: 0px 0px 10px 0px;
+    padding: 5px 0px;
+}
+
 section {
     text-align: center;
-    margin: 20px 0px 0px 0px;
+    margin: 8px 0px 5px 0px;
+}
+
+.output {
+    background: gainsboro;
+    border-radius: 5px;
+    padding: 20px 10px;
+    min-height: 100px;
+    max-width: 256px;
 }

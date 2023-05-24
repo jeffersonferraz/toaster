@@ -25,7 +25,7 @@ class Toaster {
 
         } else {
 
-            echo "Passt nicht!";
+            echo "<section>Passt nicht!</section>";
 
         }
 
@@ -37,7 +37,7 @@ class Toaster {
 
             if (!empty($this->zeit)) {
 
-                for($i = 1; $i <= 57; $i++){
+                for($i = 1; $i <= 53; $i++){
                 
                     echo "<strong>❙</strong>";
                 
@@ -55,7 +55,7 @@ class Toaster {
 
         } else {
 
-            echo "Kein Toast!";
+            echo "<section>Toaster ist leer!</section>";
 
         }
 
@@ -89,6 +89,10 @@ class Toaster {
 
             echo "<section>Der Toast ist {$this->toastZustand}</section>";
             
+        } elseif ($this->anzahlToasts <= 0) {
+
+            echo "<section>Toaster ist leer!</section>";
+
         }
 
     }

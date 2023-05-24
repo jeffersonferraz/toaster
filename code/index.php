@@ -19,12 +19,15 @@
 
             <input name="zeit" type="number" placeholder="Zeit"> <br>
 
-            <button name="button" type="submit">Toasten</button> <br>
+            <button name="toasten_button" type="submit">Toasten</button> <br>
 
+            <button class="status_button" name="status_button" type="submit">Status</button> <br>
+
+            <div class="output">
             <?php
                 include_once "Toaster.class.php";
 
-                if (isset($_POST["button"])) {
+                if (isset($_POST["toasten_button"])) {
 
                     if ($_POST["anzahl_toasts"] < 0 || $_POST["zeit"] < 0) {
 
@@ -42,7 +45,7 @@
 
                 }
             ?>
-
+            </div>
         </form>
 
     </div>
