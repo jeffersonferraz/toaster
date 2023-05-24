@@ -2,7 +2,7 @@
 
 class Toaster {
 
-    public $farbe;
+    public $farbe = "blau";
     public $schaechte = 2;
     public $anzahlToasts;
     public $toastZustand;
@@ -89,11 +89,7 @@ class Toaster {
 
             echo "<section>Der Toast ist {$this->toastZustand}</section>";
             
-        } elseif ($this->anzahlToasts <= 0) {
-
-            echo "<section>Toaster ist leer!</section>";
-
-        }
+        } 
 
     }
 

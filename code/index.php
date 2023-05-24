@@ -21,8 +21,6 @@
 
             <button name="toasten_button" type="submit">Toasten</button> <br>
 
-            <button class="status_button" name="status_button" type="submit">Status</button> <br>
-
             <div class="output">
             <?php
                 include_once "Toaster.class.php";
