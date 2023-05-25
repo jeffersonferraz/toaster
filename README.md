@@ -1,4 +1,4 @@
 # Toaster
 
 ## ***Klassendiagramm***
-<img src="/diagramm/Klassendiagramm.png"  width="80%">
+<img src="/diagramm/Klassendiagramm.png"  width="50%">
