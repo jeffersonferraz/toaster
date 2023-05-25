@@ -1,7 +1,5 @@
 # Toaster
-Toaster ist ein objektorientiertes Projekt.
-
-» Anwendung [hier testen!](https://jefferson-school.000webhostapp.com/)
+Toaster ist ein objektorientiertes Projekt. [Anwendung testen!](https://jefferson-school.000webhostapp.com/)
 <br><br>
 
 ## ***Klassendiagramm***
