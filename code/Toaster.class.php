@@ -10,8 +10,6 @@ class Toaster {
 
     public function __construct($anzahlToasts, $zeit) {
 
-        // $this->farbe = $farbe;
-        // $this->schaechte = $schaechte;
         $this->anzahlToasts = $anzahlToasts;
         $this->zeit = $zeit;
         
@@ -44,7 +42,7 @@ class Toaster {
                     // Send output to browser immediately
                     flush();
                     
-                    // Sleep one second so we can see the delay
+                    // Sleep a few seconds so we can see the delay
                     usleep($this->zeit * 1000);
                 }
 
