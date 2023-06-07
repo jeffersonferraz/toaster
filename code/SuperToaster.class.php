@@ -3,11 +3,16 @@ include_once "Toaster.class.php";
 
 class SuperToaster extends Toaster {
 
-    public function tempErmitteln($temperatur) {
+    public $temperatur;
 
-        if ($temperatur > 500) {
-            echo "500°C ist die maximale Temperatur!";
+    public function __construct($zeit) {
+        $this->temperatur = ($zeit * 10);
+    }
 
+    public function tempErmitteln() {
+
+        if ($this->temperatur >= 500) {
+            echo "<section>Fehler! Der Toaster hat die maximale Temperatur von 500°C erreicht.</section>";
         }
 
     }

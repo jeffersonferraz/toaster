@@ -24,6 +24,8 @@
             <div class="output">
             <?php
                 include_once "Toaster.class.php";
+                include_once "SuperToaster.class.php";
+
 
                 if (isset($_POST["toasten_button"])) {
 
@@ -34,10 +36,16 @@
                     } else {
 
                         $toast = new Toaster($_POST["anzahl_toasts"], $_POST["zeit"]);
-                        
+
+                        $temperatur = new SuperToaster($_POST["zeit"]);
+
                         $toast->toastReintun();
 
+                        $temperatur->tempErmitteln();
+
                         $toast->toastAuswerfen();
+                        
+                        
 
                     }
 
