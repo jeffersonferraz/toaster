@@ -12,7 +12,7 @@ class SuperToaster extends Toaster {
     public function tempErmitteln() {
 
         if ($this->temperatur >= 500) {
-            echo "<section>Fehler! Der Toaster hat die maximale Temperatur von 500°C erreicht.</section>";
+            echo "<section><strong>Fehler:</strong> Maximale Temperatur von 500°C wurde erreicht!</section>";
         }
 
     }
