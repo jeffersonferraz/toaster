@@ -53,7 +53,7 @@ class Toaster {
 
         } else {
 
-            echo "<section>Toaster ist leer!</section>";
+            echo "<section>Der Toaster ist leer!</section>";
 
         }
 
