@@ -23,7 +23,7 @@ class Toaster {
 
         } else {
 
-            echo "<section>Passt nicht!</section>";
+            echo "<section>{$this->anzahlToasts} Toasts passen nicht!<br>Der Toaster besitzt {$this->schaechte} Schächte.</section>";
 
         }
 
